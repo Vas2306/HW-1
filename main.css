@@ -4,12 +4,54 @@
     margin: 0;
     padding: 0;
 }
-
+/* Общие стили для всего тела */
 body {
+    font-family: 'Montserrat', sans-serif;
+    /* Чистый шрифт для основного текста */
+    font-weight: 400;
+    color: #333;
+}
+
+/* Заголовки (Книжный стиль) */
+h1,
+h2,
+.card-front h3 {
+    font-family: 'Playfair Display', serif;
+    /* Элегантный шрифт с засечками */
+    font-weight: 700;
+}
+
+/* Стили для тезисов на обратной стороне */
+.card-back {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+    /* Тезисы лучше читать по левому краю */
+}
+
+.card-back ul {
+    list-style-type: none;
+    /* Уберем стандартные точки */
+}
+
+.card-back li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+/* Красивый маркер для тезисов */
+.card-back li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+/* body {
     font-family: sans-serif;
     background-color: #f4f4f4;
     line-height: 1.6;
-}
+} */
 
 /* Секция-герой */
 .hero {
