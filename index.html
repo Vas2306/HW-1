@@ -1,52 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тезисы по книге</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
     <!-- Секция-герой -->
     <header class="hero">
-        <div class="hero-content">
-            <img src="img/book-cover.jpg" alt="Обложка книги" class="book-cover">
-            <h1>Название книги</h1>
-            <p>Краткое описание или автор</p>
-        </div>
+      <div class="hero-content">
+        <img src="img/book-cover.jpg" alt="Обложка книги" class="book-cover" />
+        <h1>Название книги</h1>
+        <p>Краткое описание или автор</p>
+      </div>
     </header>
 
     <!-- Основной контент с карточками -->
     <main class="container">
-        <div class="cards-grid">
-            
-            <!-- Повторите этот блок 9 раз -->
-            <div class="card">
-    <div class="card-inner">
-        <div class="card-front">
+      <div class="cards-grid">
+        <!-- Повторите этот блок 9 раз -->
+        <div class="card">
+          <div class="card-inner">
+            <!-- <div class="card-front">
             <h3>Глава 1</h3>
+        </div> -->
+            <div class="card-front" style="background-image: url('img/01.jpg')">
+              <h3>ЧОМУ ЗАВИСОКА ПЛАНКА МОЖЕ БУТИ ПРИЧИНОЮ НЕВДАЧ</h3>
+            </div>
+            <div class="card-back">
+              <p>Тезис 1</p>
+              <p>Тезис 2</p>
+            </div>
+          </div>
         </div>
-        <div class="card-back">
-            <p>Тезис 1</p>
-            <p>Тезис 2</p>
-        </div>
-    </div>
-</div>
 
-            <!-- Пример остальных карточек (упрощенно) -->
-            <div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><h3>Глава 2</h3></div><div class="card-back"><p>Тезисы...</p></div></div></div>
-            <div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><h3>Глава 3</h3></div><div class="card-back"><p>Тезисы...</p></div></div></div>
-            <div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><h3>Глава 4</h3></div><div class="card-back"><p>Тезисы...</p></div></div></div>
-            <div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><h3>Глава 5</h3></div><div class="card-back"><p>Тезисы...</p></div></div></div>
-            <div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><h3>Глава 6</h3></div><div class="card-back"><p>Тезисы...</p></div></div></div>
-            <div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><h3>Глава 7</h3></div><div class="card-back"><p>Тезисы...</p></div></div></div>
-            <div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><h3>Глава 8</h3></div><div class="card-back"><p>Тезисы...</p></div></div></div>
-            <div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><h3>Глава 9</h3></div><div class="card-back"><p>Тезисы...</p></div></div></div>
-
+        <!-- Пример остальных карточек (упрощенно) -->
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front"><h3>Глава 2</h3></div>
+            <div class="card-back"><p>Тезисы...</p></div>
+          </div>
         </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front"><h3>Глава 3</h3></div>
+            <div class="card-back"><p>Тезисы...</p></div>
+          </div>
+        </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front"><h3>Глава 4</h3></div>
+            <div class="card-back"><p>Тезисы...</p></div>
+          </div>
+        </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front"><h3>Глава 5</h3></div>
+            <div class="card-back"><p>Тезисы...</p></div>
+          </div>
+        </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front"><h3>Глава 6</h3></div>
+            <div class="card-back"><p>Тезисы...</p></div>
+          </div>
+        </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front"><h3>Глава 7</h3></div>
+            <div class="card-back"><p>Тезисы...</p></div>
+          </div>
+        </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front"><h3>Глава 8</h3></div>
+            <div class="card-back"><p>Тезисы...</p></div>
+          </div>
+        </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front"><h3>Глава 9</h3></div>
+            <div class="card-back"><p>Тезисы...</p></div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
