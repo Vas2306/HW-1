@@ -90,108 +90,67 @@ h2,
   color: #fff;
 } */
 
-/* 1. Основной контейнер карточки */
-.card {
-    perspective: 1000px;
-    height: 400px;
-    /* Увеличил высоту, чтобы текст лучше помещался */
-    cursor: pointer;
-}
-
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
-}
-
-/* Состояние при клике (через JS) */
-.card.is-flipped .card-inner {
-    transform: rotateY(180deg);
-}
-
-/* 2. Общие стили для обеих сторон */
-.card-front,
 .card-back {
-    position: absolute;
-    width: 100%;
+    /* Фиксируем высоту и разрешаем скролл */
     height: 100%;
-    backface-visibility: hidden;
-    /* Скрывает изнанку */
-    border-radius: 15px;
-    box-sizing: border-box;
-    display: block;
-}
-
-/* 3. Лицевая сторона (с картинкой) */
-.card-front {
-    background-size: cover;
-    background-position: center;
-    /* Затемнение картинки для читаемости текста */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    text-align: center;
-    color: white;
-}
-
-.card-front h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    line-height: 1.3;
-    text-transform: uppercase;
-}
-
-/* 4. Обратная сторона (Список UL) */
-.card-back {
-    margin: 0;
-    /* Сброс дефолтных отступов браузера */
-    background-color: #304963;
-    color: white;
-    transform: rotateY(180deg);
+    width: 100%;
     overflow-y: auto;
-    /* Включаем скролл */
-    list-style: none;
-    /* Убираем точки */
 
-    /* Динамический отступ сверху: 
-       минимум 40px, оптимально 15% высоты, максимум 80px */
-    padding: clamp(40px, 15%, 80px) 25px 30px 25px;
-}
+    /* Внутренние отступы: сверху дадим чуть больше (40px), чтобы текст не прилипал к краю */
+    /* padding: 40px 20px 20px 20px; */
 
-/* Кастомизация скролла для .card-back */
-.card-back::-webkit-scrollbar {
-    width: 5px;
-}
+    padding-top: clamp(30px, 20%, 80px);
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
 
-.card-back::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    /* Явно указываем блочный тип */
+    display: block;
+    box-sizing: border-box;
+    /* Чтобы padding не увеличивал размер карточки */
+
+    /* Твои цвета и скругления */
+    background-color: #3498db;
+    color: white;
     border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
-/* 5. Элементы списка (тезисы) */
+/* Сбрасываем лишние отступы у списка */
+.card-back ul {
+    margin: 0;
+    padding: 0;
+    /* margin-top: 95px; */
+    /* margin-top: clamp(20px, 15%, 100px); */
+    list-style: none;
+}
+
 .card-back li {
+    font-size: 0.9rem;
+    /* line-height: 1.5; */
+    margin-bottom: 15px;
     position: relative;
     padding-left: 25px;
-    /* Место для тире */
-    margin-bottom: 15px;
-    font-size: 0.95rem;
-    line-height: 1.5;
     text-align: left;
+    /* Место для тире */
 }
 
-/* Красивое тире перед каждым тезисом */
+/* Настраиваем тире, чтобы оно не уползало */
 .card-back li::before {
     content: "—";
     position: absolute;
     left: 0;
     top: 0;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
 }
+
+/* body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+} */
 
 .hero {
   display: flex;
@@ -266,7 +225,7 @@ h2,
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   border-radius: 10px;
@@ -307,11 +266,11 @@ h2,
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* .card-back {
+.card-back {
   background-color: #3498db;
   color: white;
   transform: rotateY(180deg);
-} */
+}
 h3 {
   color: #f4f4f4;
 }
